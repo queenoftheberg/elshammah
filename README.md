@@ -10,3 +10,4 @@ We aim to ensure food security and employment among other things.
 Food security: an economic and social condition of ready access by all members of a household to nutritionally adequate and safe food.
 - - - - -
 Initiated August 2023
+Domain registered 1 September 2023

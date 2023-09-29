@@ -1,12 +1,34 @@
 :root {
-    --bodybackgr: #dddddd;
-    --footbackgr: #232385;
+    /* colors */
+    --mainframe: #106096; /* frame around main div */
+    --bodybackgr: #bfdfef;
+    --footbackgr: #f0cd8c;
+    --navbackgr: #f2b84a;
+    --headbackgr: #EEB951;
+
     --maincolor: #000000;
-    --footcolor: #d8d8d8;
+    --updcolor: #106096;
+    --footcolor: #000000; /* 106096 d8d8d8 */
+
+    --shadow: #f0cd8c; /* similar or same as footer bkgrnd */
+
+    --navborder: #a52a2a;
+    --debugbordr3X: 1px solid var(--navbackgr);
+
+    /* sizes */
+    --backheight: 50%;
+    --backmax: 85vh;
+    --backmin: 676px; /* height of long wide pics */
+    --nav-size: 2rem;
+    --logo-size: 7rem;
+    --logobig-size: 35%;
+    --line-length: 95%;
+    --foot-length: 85%;
 }
 
+/* BASIC STRUCTURE & NAV */
 body {
-    background-color: #555888;
+    background-color: #106096; /* makes a frame around main div */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
     margin-top: 0;
@@ -18,12 +40,164 @@ body {
 }
 #maindiv {
     background-color: var(--bodybackgr);
-    width: 95%;
-    margin: 10px auto;
-    padding: 10px;
+    width: var(--line-length);
+    margin: 5px auto;
+    padding: 5px;
 }
-
+.back-divs {
+    display: block;
+    width: 100%;
+    border: var(--debugbordr3X); /* change to be visible only when debugging */
+    height: var(--backheight);
+    min-height: var(--backmin);
+    max-height: var(--backmax);
+    background-color: var(--bodybackgr); /* fallback if no image*/
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    /*background-size: 100% auto; /* was 100% 100%; - fit whole width (auto height) */
+    background-attachment:fixed;
+    opacity: 100%;
+    margin: 0 auto;
+    text-shadow: 0 0 4px var(--shadow); /* shadow to 'outline' the text */
+}
+.back-divs img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    max-height: var(--backmax);
+    margin: 0 auto;
+}
+#back-home01 {
+    background-image: url("../media_gen/els-img01a-home.jpg"); /* pic01d */
+    /*min-height: auto;*/
+}
+#back-farm02 {
+    background-image: url("../media_gen/els-img02-farm.jpg");
+    /*min-height: fit-content;*/
+}
+#back-fish03i {
+    background-image: url("../media_gen/els-img03d-fish.jpg");
+    /*min-height: auto;*/
+}
+#back-fish03 {
+    /*background-image: url("../media_gen/els-img03d-fish.jpg");*/
+    width: var(--line-length);
+    max-width: 85vw;
+    height: auto;
+    min-height: auto;
+    padding: 2rem;
+    margin: 0 auto;
+}
+#back-train04 {
+    background-image: url("../media_gen/els-img04b-train.jpg");
+    /*min-height: auto;*/
+}
+#back-reach05 {
+    background-image: url("../media_gen/els-img05d-reach.jpg");
+    /*min-height: auto;*/
+}
+.page2top {
+    background:none;
+    box-shadow: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 22px;
+    height: 22px !important; /* override #navtop a */
+    margin: 0.2rem;
+    padding: 0.1rem;
+    border: 2px dashed #050505;
+    color: #050505;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 100% !important; /* override #navtop a */
+    text-align: center;
+}
+#navtop {
+    width: var(--line-length);
+    color: #000000;
+    margin: 5px auto;
+}
+.navactive, .navshow {
+    background-color: var(--navbackgr);
+    margin: 2px;
+    padding: 2px;
+}
+.navactive {
+    border: solid 1px var(--navborder);
+    font-weight: bold;
+    color:darkblue;
+}
+.navshow {
+    border: dashed 1px var(--navborder);
+    color:#000000;
+}
+#banner {
+    /*display: flex;*/
+    margin-bottom: 10px;
+}
+#logopic, #head1, #logobigpic {
+    border: solid 1px var(--bodybackgr);
+    padding: 5px;
+}
+#logobigpic {
+    width: var(--logobig-size);
+    height: var(--logobig-size);
+}
+#logopic {
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+#head1 {
+    width: var(--nav-size);
+    height: var(--nav-size);
+}
+#head1 {
+    width: auto;
+}
 footer {
     background-color: var(--footbackgr);
     color: var(--footcolor);
+    width: var(--foot-length);
+    margin: 0.3rem auto;
+    padding: 0.3rem;
 }
+/* FORM */
+#NoRobot, #mailer {
+    width: 80%;
+    margin: 0.3rem auto;
+    text-align: center;
+}
+
+/* ELEMENTS */
+hr {
+    width: 75%;
+    margin: 0 auto;
+}
+h1, h2, h3, h4 {
+    padding: 0rem;
+}
+p {
+    padding: 0.5rem
+}
+/* CLASSES */
+.notosea {
+    display: none;
+}
+.tosea {
+    display: unset;
+}
+.centers {
+    text-align: center;
+    margin: 0.1rem auto;
+}
+.updaily {
+    background-color: var(--updcolor);
+    /*border: 1px dashed blue;*/
+    color:#f2b84a
+}
+.smalltext {
+    font-size: 0.7rem;
+}
+/* IDs */

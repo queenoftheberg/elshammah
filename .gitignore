@@ -1,0 +1,8 @@
+??lock*
+.gitignoreZ (not ignored any more)
+*.tmp
+*tmp*
+zx*
+*media*
+*unpack*
+?idea*
