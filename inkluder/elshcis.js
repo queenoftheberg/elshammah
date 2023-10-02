@@ -46,7 +46,7 @@ function emladrex(referral) {
     document.getElementById("emlbutton").title = "Please Click on the valid link to send / select or right-click to copy";
     document.getElementById("emlbutton").alt = "Please Click on the valid email to send / select or right-click to copy";
     document.getElementById("emlbutton").id = "emlbut";
-    document.getElementById("emlwaiter").innerHTML = "If you Click the email address, then Wait a moment for mail app to open<br />or Right-click (or select) to copy for web-based mail";
+    document.getElementById("emlwaiter").innerHTML = "If you Click the email address, please Wait a moment for your mail app to open<br />or Right-click (or select) to copy for web-based mail";
     document.getElementById("emlwaiter").id = "emlwait";
 }
 /* ================================================================================================= */
@@ -74,7 +74,30 @@ function finks(hoois = 'tester') {
     document.getElementById("emladrimg").href = mil[1];
     document.getElementById("emladrimg").title = "The robot checker is back, protecting email addresses from spammers";
 }
+/*  - - - - - REACH OUT - - - - -  */
+function hoominonly(namer) {
+    let named = document.getElementById("name").value;
+    let tamer = "nonamebranded";
+    let teslen = named.toString().length;
+    let msg = "We will do our best to respond within 48hours (weekdays)";
+    let recip = "mailto:info@actualdomain.org?subject=Mail if not a robot"
 
+    if(teslen==0) {
+        if(namer==tamer) {
+            document.getElementById("formtext").innerHTML="Please click <b>Send</b> after filling in the REQUIRED fields <br/>(marked&nbsp;by&nbsp;*)";
+            document.getElementById("form1").className = "notosea";
+            /*document.getElementById("form1").id = "form2";*/
+            document.getElementById("formx").className = "tosea";
+            /*document.getElementById("formx").id = "formthru";*/
+            recip = giva('reachout');
+            document.getElementById("brander").textContent = msg;
+            document.getElementById("altmail").href = recip;
+            return true;
+        }
+    };
+    
+    return false;
+};
 function makeReload() {
     window.history.forward(1);
 } /* this is not used- replaced by Tip for users at bottom of Home page to Refresh/ Reload */

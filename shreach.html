@@ -19,35 +19,47 @@
     </div> <!-- navtop -->
 
 
-    <div id="back-reach05" class="back-divs">
-        <div id="banner">
-            <h1 id="head1">Reach out El-Shammah Foundation</h1>
-            <p>&nbsp;</p>
-            <h2>Non-profit Company</h2>
-            <p><img id="logopic" src="./media_gen/logo-elshammah.jpg" alt="logo" loading="lazy"/></p>
-        </div>
-        <!--h2>REACH OUT</h2-->
-        <h4>Let us take hands and reach out to those less fortunate than ourselves. </h4>
-    </div> <!-- back-reach: background image near the top -->
 
+    <div id="banner">
+        <h1 id="head1">Reach out El-Shammah Foundation</h1>
+        <!--p>&nbsp;</p-->
+        <h2>Non-profit Company</h2>
+        <div id="back-reach05" class="back-divs">
+            <h3>The greatest teacher of all time once said, "It is more blessed to give than to receive."</h3>
+            <img src="./media_gen/els-img05b-reach.jpg" alt="reaching out" loading="lazy" />
+        </div> <!-- back-reach: image near the top -->
+        <p><img id="logopic" src="./media_gen/logo-elshammah.jpg" alt="logo" loading="lazy"/></p>
+    </div>
+    <!--h2>REACH OUT</h2-->
+    <h4>Let us take hands and reach out to those less fortunate than ourselves. </h4>
+
+<?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'vendor/autoload.html';
+
+    $mailtxt = new PHPMailer(true);
+
+?>
     <div class="stdmain">
-        <h3>Coming soon . . . </h3>
-        <h3>ETA: September / October 2023</h3>
         <hr/>
         <section id="contacter">
             <div class="divide" id="Contact"><!-- hr / --></div>
             <div id="form-div">
                 <h3>Donate</h3>
-                <p id="formtext">Please fill in the form below.
-                </p>
-                <p><!--span>-<: </span--><span id="brander">Please click <b>I&nbsp;am&nbsp;not&nbsp;a&nbsp;Robot</b> to open the contact form</span><!--span> :>-</span--></p>
-                <form id="form1" action="./index.html#contacter">
-                    <button id="norobot"  onclick="hoominonly('nonamebranded')">I&nbsp;am&nbsp;not&nbsp;a&nbsp;Robot</button>
-                    <label class="labl dark" for="fname">Enter name * 
+                <p id="formtext">Please fill in the form below after verifying that you are human. </p>
+                <p><!--span>-<: </span--><span id="brander"></span><!--span> :>-</span--></p>
+                <form id="form1" action="#contacter">
+                    <p id="emltext1">Please click </p>
+                    <button id="emlbutton"  onclick="hoominonly('nonamebranded')" title="Click to show the real form">I&nbsp;am&nbsp;not&nbsp;a&nbsp;Robot</button>
+                    <p id="emltext2"> to open the contact form</p>
+                    <label class="labl dark" for="fname">Enter name * (required)
                         <!--input type="text" id="fname" name="fname"  placeholder="Firstname Surname" /-->
                         <p id="fname" name="fname"></p>
                     </label>
-                    <label id="l1" class="labl dark" for="mail">Enter email * 
+                    <label id="l1" class="labl dark" for="mail">Enter email * (required)
                         <!--input type="text" id="mail" name="mail"  placeholder="someone@example.com" /-->
                         <p id="mail" name="mail"></p>
                     </label>
@@ -55,28 +67,37 @@
                         <!--textarea type="text" id="comment" name="comment" placeholder="Please leave helpful suggestions or issues here" rows="3" cols="40"></textarea-->
                         <p id="comment" name="comment"></p>
                     </label>
-                    <label class="labl" for="name">&nbsp;
-                        <input type="text" id="name" name="name" />
+                    <label class="notosea" for="name">&nbsp;
+                        <input type="text" id="name" class="dark" name="name" disabled/>
                     </label>
                 </form>
 
-                <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit"> 
-                    <label class="labl" for="fullname">Enter name * 
+                <h1>Donation Form coming soon . . .</h1>
+                <h2>In the mean time, feel free to <a class="navline" href="/index.html#mailer" title="Contact us via email">Contact Us<span class="navtran"></span></a> via email.</h2>
+                <!--form id="formx" class="notosea" method="POST" action="#contacter"> 
+                    <label class="labl" for="fullname">Enter name * (required)
                         <input type="text" id="fullname" name="fullname" required placeholder="Firstname Surname" />
                     </label>
-                    <label id="l1" class="labl" for="email">Enter email *
+                    <label id="l1" class="labl" for="email">Enter email * (required)
                         <input type="email" id="email" name="email" required placeholder="someone@example.com" />
                     </label>
                     <label class="labl" for="comments">Optionally leave a comment 
                         <textarea type="text" id="comments" name="comments" placeholder="Please leave helpful suggestions or issues here" rows="3" cols="40"></textarea>
                     </label>
+                    <label class="labl" for="pmeths">
+                        <ul>
+                            <li><input type="radio" class="rad" id="pfast1" name="pmeths" value="PayFast"checked> PayFast</li>
+                            <li><input type="radio" class="rad" id="ppal2" name="pmeths" value="PayPal"/> PayPal</li>
+                            <li><input type="radio" class="rad" id="pget3" name="pmeths" value="Getit"/> Getit</li>
+                        </ul>
+                    </label>
                     <input type="submit" id="submit" value="Send" />
                 </form>
-                
-            </div> <!-- form-div -->
-            <p>PayFast</p>
-            <p>PayPal</p>
-            <p>Getit</p>
+                <p><a id="altmail" class="ready" href="mailto:reach-out@el-shammah.org?subject=Online mailer">Alternatively, send a direct mail</a></p>
+            </div--> <!-- form-div -->
+            <p></p>
+            <p></p>
+            <p></p>
         </section>
     </div> <!-- stdmain -->
 

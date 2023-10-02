@@ -10,19 +10,20 @@
     --updcolor: #106096;
     --footcolor: #000000; /* 106096 d8d8d8 */
 
-    --shadow: #f0cd8c; /* similar or same as footer bkgrnd */
+    --shadow: #f2b84a; /* similar or same as footer bkgrnd */
 
     --navborder: #a52a2a;
+    --backborder: 1px solid var(--navbackgr);
     --debugbordr3X: 1px solid var(--navbackgr);
 
     /* sizes */
     --backheight: 50%;
-    --backmax: 85vh;
-    --backmin: 676px; /* height of long wide pics */
+    --backmax: 95vh;
+    --backmin: 40vh; /* height of long wide pics */
     --nav-size: 2rem;
     --logo-size: 7rem;
-    --logobig-size: 35%;
-    --line-length: 95%;
+    --logobig-size: 48%;
+    --line-length: 85%;
     --foot-length: 85%;
 }
 
@@ -46,11 +47,11 @@ body {
 }
 .back-divs {
     display: block;
-    width: 100%;
-    border: var(--debugbordr3X); /* change to be visible only when debugging */
+    width: 90%;
+    border: var(--backborder);
     height: var(--backheight);
     min-height: var(--backmin);
-    max-height: var(--backmax);
+    /*max-height: var(--backmax);*/
     background-color: var(--bodybackgr); /* fallback if no image*/
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -65,23 +66,10 @@ body {
     width: 100%;
     height: auto;
     padding: 0;
-    max-height: var(--backmax);
+    /*max-height: var(--backmax);*/
     margin: 0 auto;
 }
-#back-home01 {
-    background-image: url("../media_gen/els-img01a-home.jpg"); /* pic01d */
-    /*min-height: auto;*/
-}
-#back-farm02 {
-    background-image: url("../media_gen/els-img02-farm.jpg");
-    /*min-height: fit-content;*/
-}
-#back-fish03i {
-    background-image: url("../media_gen/els-img03d-fish.jpg");
-    /*min-height: auto;*/
-}
-#back-fish03 {
-    /*background-image: url("../media_gen/els-img03d-fish.jpg");*/
+#back-home01, #back-farm02, #back-fish03, #back-train04, #back-reach05 {
     width: var(--line-length);
     max-width: 85vw;
     height: auto;
@@ -89,14 +77,7 @@ body {
     padding: 2rem;
     margin: 0 auto;
 }
-#back-train04 {
-    background-image: url("../media_gen/els-img04b-train.jpg");
-    /*min-height: auto;*/
-}
-#back-reach05 {
-    background-image: url("../media_gen/els-img05d-reach.jpg");
-    /*min-height: auto;*/
-}
+
 .page2top {
     background:none;
     box-shadow: none;
@@ -131,7 +112,10 @@ body {
 }
 .navshow {
     border: dashed 1px var(--navborder);
-    color:#000000;
+    color: #000000;
+}
+.navline {
+    color: #0000ff;
 }
 #banner {
     /*display: flex;*/
@@ -150,11 +134,8 @@ body {
     height: var(--logo-size);
 }
 #head1 {
-    width: var(--nav-size);
-    height: var(--nav-size);
-}
-#head1 {
     width: auto;
+    height: var(--nav-size);
 }
 footer {
     background-color: var(--footbackgr);
@@ -169,6 +150,47 @@ footer {
     margin: 0.3rem auto;
     text-align: center;
 }
+#emlbutton, #emladr {
+    background-color: var(--footbackgr);
+    font-size: 2rem;
+    padding: 0rem;
+}
+#emladr {
+    line-height: 160%;
+}
+#emlbutton {
+    padding: 0.4rem;
+}
+#emlbut {
+    background-color: unset;
+    border: unset;
+    font-size: unset;
+}
+.notosea { /* , #form2, #formx */
+    display: none !important;
+}
+.tosea {
+    display: unset !important;
+}
+#formx {
+    /*display: none;*/
+    background-color: grey;
+}
+.formthru {
+    display: block;
+    background-color:#f2b84a;
+}
+.labl {
+    display: block;
+    width: 30%;
+    padding: 0.3rem;
+    margin: 0.1rem;
+    border: dashed 1px #808080;
+}
+.dark {
+    background-color: #778899;
+    color: black;
+}
 
 /* ELEMENTS */
 hr {
@@ -176,18 +198,13 @@ hr {
     margin: 0 auto;
 }
 h1, h2, h3, h4 {
-    padding: 0rem;
+    display: block;
+    padding: 0.7rem;
 }
 p {
     padding: 0.5rem
 }
 /* CLASSES */
-.notosea {
-    display: none;
-}
-.tosea {
-    display: unset;
-}
 .centers {
     text-align: center;
     margin: 0.1rem auto;
